@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+    --yellowBoom: #ffb600;
+    --roseBoom: #ff2ba9;
+    --violetBoom: #6c2180;
+    --blueBoom: #00b8f8;
+    --blackBoom: #545454;
+    --color: #eee;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

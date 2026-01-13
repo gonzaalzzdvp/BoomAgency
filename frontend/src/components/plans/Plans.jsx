@@ -1,0 +1,55 @@
+import { Link } from "react-router-dom";
+import Button1 from "../buttons/Button1";
+import Button2 from "../buttons/Button2";
+import "../../styles/plans.css"
+
+export default function Plans() {
+  return (
+    <div className="my-20 text-center text-4xl font-semibold">
+      <h3 className="">Nuestros planes</h3>
+      <div className="my-10 grid grid-cols-4 gap-10">
+        <Link to="/plans" className="plans">
+          <img
+            src="/plans/flame.png"
+            alt="Flama"
+            className="w-50 rounded-t-2xl"
+          />
+          <p className="">
+            Flama
+          </p>
+        </Link>
+        <Link to="/plans" className="plans">
+          <img
+            src="/plans/boomLogo.png"
+            alt="Boom"
+            className="w-50 rounded-t-2xl"
+          />
+          <p className="">
+            Boom
+          </p>
+        </Link>
+        <Link to="/plans" className="plans">
+          <img
+            src="/plans/atomic.png"
+            alt="Oppenheimer"
+            className="w-50 rounded-t-2xl"
+          />
+          <p className="">
+            Oppenheimer
+          </p>
+        </Link>
+        <Link to="/plans" className="plans">
+          <img
+            src="/plans/personalizado.png"
+            alt="Personalizado"
+            className="w-50 rounded-t-2xl"
+          />
+          <p className="">
+            Personalizado
+          </p>
+        </Link>
+      </div>
+      <Button1 text="Todos los Planes" to="/plans" />
+    </div>
+  );
+}

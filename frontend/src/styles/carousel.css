@@ -1,0 +1,116 @@
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+}
+
+.carousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    position-anchor: --carousel;
+    position-area: bottom center;
+}
+
+.card::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    margin-top: 1rem;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.card::scroll-marker:target-current {
+    background-color: var(--blueBoom);
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel::scroll-button(right), .carousel::scroll-button(left) {
+    content: '';
+    font-family: Consolas;
+    background-color: var(--yellowBoom);
+    background-image: url(/carousel/right.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    border: none;
+    color: var(--color-white);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: absolute;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -110%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel::scroll-button(left) {
+    content: '';
+    position-area: left center;
+    translate: 110%;
+    background-image: url(/carousel/left.png);
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.carousel.carousel::scroll-button(right):hover, .carousel::scroll-button(left):hover {
+      transform: scale(1.05);
+}
+
+.card {
+  min-width: 18rem;
+  height: 18rem;
+  border-radius: 18px;
+  scroll-snap-align: center;
+  background-size: cover;
+  background-position: center;
+  margin: 3rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 1s ease
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-text {
+    background-color: white;
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 640px) {
+    .card {
+        flex: 0 0 18em;
+        height: 20rem;
+    }
+}
+
