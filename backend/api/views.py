@@ -18,30 +18,64 @@ class RegisterView(APIView):
     def post(self, request):
         data = request.data
         username = data.get('username')
+        email = data.get('email')
         password = data.get('password')
+
+        if not username or not email or not password:
+            return Response(
+                {'error': 'Todos los campos son obligatorios'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
         if User.objects.filter(username=username).exists():
-            return Response({'error': 'Usuario ya existe'}, status=status.HTTP_400_BAD_REQUEST)
-        user = User.objects.create_user(username=username, password=password)
+            return Response({'error': 'El usuario ya existe'}, status=400)
+
+        if User.objects.filter(email=email).exists():
+            return Response({'error': 'El email ya está registrado'}, status=400)
+
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password
+        )
+
         tokens = get_tokens_for_user(user)
-        response = Response({'message': 'Usuario creado'}, status=status.HTTP_201_CREATED)
-        # Guardar token en cookie segura
+        response = Response({'message': 'Usuario creado'}, status=201)
+
         response.set_cookie('access', tokens['access'], httponly=True)
         response.set_cookie('refresh', tokens['refresh'], httponly=True)
+
         return response
 
 # LOGIN
 class LoginView(APIView):
     def post(self, request):
         data = request.data
-        username = data.get('username')
+        email = data.get('email')
         password = data.get('password')
-        user = authenticate(username=username, password=password)
+
+        if not email or not password:
+            return Response(
+                {'error': 'Email y password son obligatorios'},
+                status=400
+            )
+
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            return Response({'error': 'Credenciales inválidas'}, status=401)
+
+        user = authenticate(username=user.username, password=password)
+
         if user is None:
-            return Response({'error': 'Credenciales inválidas'}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({'error': 'Credenciales inválidas'}, status=401)
+
         tokens = get_tokens_for_user(user)
-        response = Response({'message': 'Login exitoso'}, status=status.HTTP_200_OK)
+        response = Response({'message': 'Login exitoso'}, status=200)
+
         response.set_cookie('access', tokens['access'], httponly=True)
         response.set_cookie('refresh', tokens['refresh'], httponly=True)
+
         return response
 
 # PROFILE (protegido)

@@ -12,8 +12,8 @@ export default function Footer() {
     <div>
       <div className="bg-[var(--violetBoom)] p-10 w-full flex justify-around  gap-10 text-lg">
         <div className="flex flex-col gap-10">
-          <h5 className="w-100 text-white font-bold text-5xl">
-            Conecta con muchas más personas
+          <h5 className="w-100 text-white font-bold text-5xl leading-16">
+            <span className="text-[var(--roseBoom)]">¡</span>Creemos impacto juntos<span className="text-[var(--roseBoom)]">!</span>
           </h5>
           <div className="flex gap-10">
             <Button1 text="Contrata un plan" to="/plans" />

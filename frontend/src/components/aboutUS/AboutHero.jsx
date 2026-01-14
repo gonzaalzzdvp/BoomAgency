@@ -2,7 +2,8 @@ import Carousel from "../carousel/Carousel";
 import "../../styles/carousel.css";
 import Mafer from "/carousel/Mafer.png";
 import Hector from "/carousel/Hector.png";
-import Amanda from '/carousel/amanda.png'
+import Amanda from '/carousel/amanda.png';
+import Glennis from '/carousel/glennis.png'
 
 export default function AboutHero() {
   const users = [
@@ -12,7 +13,7 @@ export default function AboutHero() {
       text: "CEO",
     },
     {
-      image: Mafer,
+      image: Glennis,
       name: "Glennis Ybirma",
       text: "CEO",
     },
@@ -35,9 +36,8 @@ export default function AboutHero() {
 
   return (
     <div className="w-full my-10 flex flex-col items-center font-semibold">
-      <h3 className="text-4xl text-center w-[70%] mt-20">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-        recusandae quibusdam nulla?
+      <h3 className="w-[70%] mt-20 text-4xl text-center uppercase font-bold text-[var(--blueBoom)]">
+        En <span className="text-[var(--violetBoom)]">Boom Agency</span> hacemos que tu marca brille
       </h3>
 
       <div className="max-w-full">

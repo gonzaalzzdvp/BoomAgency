@@ -18,14 +18,12 @@ export default function Navbar() {
         <li className="cursor-pointer hover:text-[var(--blackBoom)]">Planes</li>
         <li className="cursor-pointer hover:text-[var(--blackBoom)]">Reviews</li>
       </ul>
-      <div className="flex">
-        <div className="px-6 flex gap-2">
+      <div className="flex items-center">
+        <div className="px-6 flex flex-col hover:text-[--violetBoom]">
           <Link to={"/login"} className="h-full flex justify-center items-center">
             <FontAwesomeIcon icon={faUser} className="text-2xl text-[var(--blueBoom)] hover:text-[var(--violetBoom)]" />
           </Link>
-          <Link to={"/register"} className="h-full flex justify-center items-center">
-            <FontAwesomeIcon icon={faAddressCard} className="text-2xl text-[var(--blueBoom)] hover:text-[var(--violetBoom)]" />
-          </Link>
+          <span className="">Ingresar</span>
         </div>
         <Button1 text="Contacto" to="/contact" className="navbar" />
       </div>
