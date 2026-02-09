@@ -14,14 +14,14 @@ export default function Navbar() {
         />
       </Link>
       <ul className="flex gap-30">
-        <li className="cursor-pointer hover:text-[var(--blackBoom)]">Nosotros</li>
-        <li className="cursor-pointer hover:text-[var(--blackBoom)]">Planes</li>
-        <li className="cursor-pointer hover:text-[var(--blackBoom)]">Reviews</li>
+        <li className="cursor-pointer hover:text-(--blackBoom)">Nosotros</li>
+        <li className="cursor-pointer hover:text-(--blackBoom)">Planes</li>
+        <li className="cursor-pointer hover:text-(--blackBoom)">Reviews</li>
       </ul>
       <div className="flex items-center">
-        <div className="px-6 flex flex-col hover:text-[--violetBoom]">
+        <div className="px-6 flex flex-col hover:text-(--violetBoom)">
           <Link to={"/login"} className="h-full flex justify-center items-center">
-            <FontAwesomeIcon icon={faUser} className="text-2xl text-[var(--blueBoom)] hover:text-[var(--violetBoom)]" />
+            <FontAwesomeIcon icon={faUser} className="text-2xl text-(--blueBoom) hover:text-(--violetBoom)" />
           </Link>
           <span className="">Ingresar</span>
         </div>

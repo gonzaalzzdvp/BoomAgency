@@ -6,9 +6,9 @@ export default function Plans() {
   return (
     <div className="my-20 text-center text-4xl font-semibold flex flex-col justify-center items-center">
       <div className="flex gap-10 items-center">
-        <div className="h-18 w-3 bg-[var(--roseBoom)] rounded-2xl"></div>
-        <h3 className="uppercase font-bold text-[var(--roseBoom)]">Conoce Nuestros <span className="text-[var(--blueBoom)]">Planes</span></h3>
-        <div className="h-18 w-3 bg-[var(--roseBoom)] rounded-2xl"></div>
+        <div className="h-18 w-3 bg-(--roseBoom) rounded-2xl"></div>
+        <h3 className="uppercase font-bold text-(--roseBoom)">Conoce Nuestros <span className="text-(--blueBoom)">Planes</span></h3>
+        <div className="h-18 w-3 bg-(--roseBoom) rounded-2xl"></div>
       </div>
       <div className="my-10 grid grid-cols-4 gap-10">
         <Link to="/plans" className="plans">

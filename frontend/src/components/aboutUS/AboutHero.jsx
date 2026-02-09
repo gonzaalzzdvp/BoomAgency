@@ -36,8 +36,8 @@ export default function AboutHero() {
 
   return (
     <div className="w-full my-10 flex flex-col items-center font-semibold">
-      <h3 className="w-[70%] mt-20 text-4xl text-center uppercase font-bold text-[var(--blueBoom)]">
-        En <span className="text-[var(--violetBoom)]">Boom Agency</span> hacemos que tu marca brille
+      <h3 className="w-[70%] mt-20 text-4xl text-center uppercase font-bold text-(--blueBoom)">
+        En <span className="text-(--violetBoom)">Boom Agency</span> hacemos que tu marca&nbsp;brille
       </h3>
 
       <div className="max-w-full">

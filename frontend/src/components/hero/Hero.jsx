@@ -5,12 +5,12 @@ export default function Home() {
     <div className="min-h-[calc(100vh - 80px)] mt-30 mb-10 px-20 flex justify-center">
       <div className="flex flex-col justify-center gap-7">
         <div className="w-[70%] bg-white grid grid-cols-2 justify-items-center rounded-2xl">
-          <h1 className="font-bold text-[var(--violetBoom)] flex items-center text-8xl row-start-1">
+          <h1 className="font-bold text-(--violetBoom) flex items-center text-8xl row-start-1">
             Boom
           </h1>
-          <h2 className="font-bold text-[var(--blueBoom)] flex items-center text-8xl row-start-2 col-start-1 col-end-3 justify-self-start">
+          <h1 className="font-bold text-(--blueBoom) flex items-center text-8xl row-start-2 col-start-1 col-end-3 justify-self-start">
             Agency
-          </h2>
+          </h1>
           <img
             src="/hero/megaphone.png"
             alt="Megaphone"

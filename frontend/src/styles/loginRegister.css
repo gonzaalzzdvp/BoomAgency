@@ -1,6 +1,7 @@
 .principal {
     position: relative;
     height: 100vh;
+    margin-top: 3rem;
     background-color: var(--yellowBoom);
     display: flex;
     flex-direction: column;
