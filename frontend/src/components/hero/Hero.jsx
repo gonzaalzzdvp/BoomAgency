@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-[calc(100vh - 80px)] mt-30 mb-10 px-20 flex justify-center">
       <div className="flex flex-col justify-center gap-7">
-        <div className="w-[70%] bg-white grid grid-cols-2 justify-items-center rounded-2xl">
+        <div className="w-[70%] bg-white grid grid-cols-2 justify-items-center-safe gap-x-10 rounded-2xl">
           <h1 className="font-bold text-(--violetBoom) flex items-center text-8xl row-start-1">
             Boom
           </h1>
@@ -14,16 +14,13 @@ export default function Home() {
           <img
             src="/hero/megaphone.png"
             alt="Megaphone"
-            className="w-30 row-start-1 col-start-2 flex justify-center items-center"
+            className="w-30 row-start-1 col-start-2 flex justify-center items-center self-end"
           />
         </div>
         <p className="text-xl w-[70%] bg-white rounded-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non
-          doloremque quis numquam dolorum accusantium veritatis neque quibusdam
-          temporibus? Provident ullam voluptatem et quasi doloremque dolor vitae
-          doloribus quia&nbsp;quaerat.
+          No hacemos marketing bonito, hacemos marketing que vende. Convertimos ideas en resultados reales y marcas invisibles en negocios imposibles de&nbsp;ignorar.
         </p>
-        <Button1 text="Contáctanos" to="/contact" />
+        <Button1 text="Contáctanos" to="/contact" color={'bg-(--yellowBoom)'}/>
       </div>
       <div className="w-300">
         <video src="/hero/heroVid.mp4" autoPlay muted loop playsInline></video>

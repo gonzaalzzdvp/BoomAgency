@@ -20,7 +20,7 @@ export default function Navbar() {
       </ul>
       <div className="flex items-center">
         <div className="px-6 flex flex-col hover:text-(--violetBoom)">
-          <Link to={"/login"} className="h-full flex justify-center items-center">
+          <Link to={"/login-register"} className="h-full flex justify-center items-center">
             <FontAwesomeIcon icon={faUser} className="text-2xl text-(--blueBoom) hover:text-(--violetBoom)" />
           </Link>
           <span className="">Ingresar</span>

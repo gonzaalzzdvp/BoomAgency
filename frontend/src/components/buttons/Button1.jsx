@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import "../../styles/buttons.css"
 
-export default function Button1({ text, to, className = "" }) {
+export default function Button1({ text, to, className, color }) {
   return (
     <div className={`wrapper ${className}`}>
-      <Link className={`button ${className}`} to={to}>
+      <Link className={`button ${className} ${color}`} to={to}>
         {text}
       </Link>
 

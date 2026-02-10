@@ -9,10 +9,9 @@
 .button {
     display: inline-block;
     text-align: center;
-    background: var(--yellowBoom);
     color: var(--blackBoom);
     font-weight: bold;
-    padding: 1.18em 1.32em 1.03em;
+    padding: 1.18em 1.03em;
     line-height: 1;
     border-radius: 1em;
     position: relative;
