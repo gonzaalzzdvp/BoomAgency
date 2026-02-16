@@ -2,16 +2,19 @@
 
 .wrapper {
     padding: 1.5rem 0;
-    -webkit-filter: url('#goo');
-            filter: url('#goo');
+    filter: url('#goo');
 }
 
 .button {
-    display: inline-block;
-    text-align: center;
-    color: var(--blackBoom);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--btn-bg, var(--yellowBoom));
+    color: var(--btn-text, var(--blackBoom));
+
     font-weight: bold;
-    padding: 1.18em 1.03em;
+    padding: 1.1em 1.3em;
     line-height: 1;
     border-radius: 1em;
     position: relative;
@@ -20,52 +23,48 @@
     font-size: 1.25rem;
 }
 
-.button:before,
-.button:after {
+/* Goo blobs */
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
     width: 4.4em;
     height: 2.95em;
-    position: absolute;
-    content: "";
-    display: inline-block;
-    background: var(--yellowBoom);
+    background: var(--btn-bg, var(--yellowBoom));
     border-radius: 50%;
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
+    transform: scale(0);
     transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
-    -webkit-transform: scale(0);
-            transform: scale(0);
     z-index: -1;
 }
 
-.button:before {
+.button::before {
     top: -25%;
     left: 20%;
 }
 
-.button:after {
+.button::after {
     bottom: -25%;
     right: 20%;
 }
 
-.button:hover:before,
-.button:hover:after {
-    -webkit-transform: none;
-            transform: none;
+.button:hover::before,
+.button:hover::after {
+    transform: none;
 }
+
 
 /* NAVBAR GOOEY */
 
 /* Wrapper compacto */
-.wrapper.navbar {
+.wrapper.small {
     padding: 0;
     filter: url('#goo');
 }
 
 /* Botón compacto */
-.button.navbar {
+.button.small {
     font-size: 0.85rem;
-    background: var(--roseBoom);
+    background: var(--btn-bg, var(--roseBoom));
     color: #fff;
     padding: 0.6em 1em;
     min-width: auto;
@@ -73,19 +72,19 @@
 }
 
 /* Goo blobs más pequeños */
-.button.navbar::before,
-.button.navbar::after {
+.button.small::before,
+.button.small::after {
     width: 2.5em;
     height: 1.7em;
-    background: var(--roseBoom);
+    background: var(--btn-bg, var(--roseBoom));
 }
 
-.button.navbar::before {
+.button.small::before {
     top: -35%;
     left: 15%;
 }
 
-.button.navbar::after {
+.button.small::after {
     bottom: -35%;
     right: 15%;
 }

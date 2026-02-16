@@ -5,7 +5,7 @@ import { useAuth } from "../../context/AuthContext";
 import toast from "react-hot-toast";
 
 import Button1 from "../buttons/Button1";
-import "../../styles/LoginRegister.css";
+import "../../styles/loginRegister.css";
 
 export default function LoginRegister() {
   const { login } = useAuth();
@@ -59,7 +59,6 @@ export default function LoginRegister() {
   return (
     <div className="principal">
       <div className={`container ${isActive ? "active" : ""}`}>
-
         {/* SIGN UP */}
         <div className="form-container sign-up">
           <form onSubmit={handleSubmitRegister}>
@@ -85,9 +84,13 @@ export default function LoginRegister() {
               onChange={(e) => setPasswordRegister(e.target.value)}
               required
             />
-            <button type="submit" className="h-10">
-              <Button1 text={'Registrarse'} color={'bg-(--roseBoom)'} ></Button1>
-            </button>
+              <Button1
+                text={"Registrarse"}
+                className="small"
+                bgColor="var(--blueBoom)"
+                textColor="var(--color)"
+                type="submit"
+              ></Button1>
           </form>
         </div>
 
@@ -109,20 +112,27 @@ export default function LoginRegister() {
               onChange={(e) => setPasswordLogin(e.target.value)}
               required
             />
-            <button type="submit" className="">
-              Ingresar
-            </button>
+              <Button1
+                type="submit"
+                text={"Iniciar sesion"}
+                className="small"
+                bgColor="var(--blueBoom)"
+                textColor="var(--color)"
+              ></Button1>
           </form>
         </div>
 
         {/* TOGGLE */}
         <div className="toggle-container">
           <div className="toggle">
-
             <div className="toggle-panel toggle-left">
               <h1 className="text-3xl">Bienvenido de&nbsp;vuelta</h1>
               <p>Coloca tus datos para ingresar&nbsp;nuevamente</p>
-              <button type="button" onClick={() => setIsActive(false)}>
+              <button
+                type="button"
+                className="bg-(--yellowBoom)"
+                onClick={() => setIsActive(false)}
+              >
                 Iniciar Sesión
               </button>
             </div>
@@ -130,14 +140,16 @@ export default function LoginRegister() {
             <div className="toggle-panel toggle-right">
               <h1>Bienvenido, amigo</h1>
               <p>Regístrate para obtener toda la&nbsp;información</p>
-              <button type="button" onClick={() => setIsActive(true)}>
+              <button
+                type="button"
+                className="bg-(--yellowBoom)"
+                onClick={() => setIsActive(true)}
+              >
                 Registrarse
               </button>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   );

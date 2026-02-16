@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import Button1 from "../buttons/Button1";
+
 import "../../styles/plans.css"
+import "../../styles/animations.css"
 
 export default function Plans() {
   return (
     <div className="my-20 text-center text-4xl font-semibold flex flex-col justify-center items-center">
       <div className="flex gap-10 items-center">
         <div className="h-18 w-3 bg-(--roseBoom) rounded-2xl"></div>
-        <h3 className="uppercase font-bold text-(--roseBoom)">Conoce Nuestros <span className="text-(--blueBoom)">Planes</span></h3>
+        <h3 className="uppercase font-bold text-(--roseBoom)">Conoce Nuestros <span className="hover-text-grow text-(--blueBoom)">Planes</span></h3>
         <div className="h-18 w-3 bg-(--roseBoom) rounded-2xl"></div>
       </div>
       <div className="my-10 grid grid-cols-4 gap-10">

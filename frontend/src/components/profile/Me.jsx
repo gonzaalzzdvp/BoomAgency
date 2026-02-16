@@ -15,7 +15,7 @@ export default function Me() {
     <div className="min-h-screen py-40 px-25">
       <h1>Hello {user.email}</h1>
       <button onClick={handleLogout}>
-        <Button1 text={"Logout"} className=""></Button1>
+        <Button1 text={"Logout"} className="" bgColor="var(--violetBoom)" textColor="var(--color)"></Button1>
       </button>
     </div>
   );
