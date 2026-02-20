@@ -12,7 +12,7 @@ export default function Plans() {
         <h3 className="uppercase font-bold text-(--roseBoom)">Conoce Nuestros <span className="hover-text-grow text-(--blueBoom)">Planes</span></h3>
         <div className="h-18 w-3 bg-(--roseBoom) rounded-2xl"></div>
       </div>
-      <div className="my-10 grid grid-cols-4 gap-10">
+      <div className="my-10 flex flex-col md:flex-row gap-7">
         <Link to="/plans" className="plans">
           <img
             src="/plans/flame.png"

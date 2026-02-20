@@ -16,7 +16,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
+    <nav className="fixed top-0 left-0 z-50 w-screen bg-white shadow-sm">
       <div className="h-20 px-6 flex justify-between items-center">
         {/* LOGO */}
         <Link to="/" className="flex items-center">
@@ -80,10 +80,8 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out origin-top ${
-          menuOpen
-            ? "max-h-[500px] opacity-100 scale-y-100"
-            : "max-h-0 opacity-0 scale-y-95"
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          menuOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col gap-6 px-6 pb-6 bg-white shadow-md">

@@ -5,7 +5,7 @@ import Plans from '../components/plans/Plans'
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="overflow-x-hidden">
       <Hero/>
       <AboutHero />
       <Plans />
