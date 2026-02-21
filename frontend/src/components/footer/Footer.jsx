@@ -14,18 +14,18 @@ export default function Footer() {
       <div className="bg-(--violetBoom) px-6 py-12 text-lg">
         
         {/* MOBILE FIRST CONTAINER */}
-        <div className="flex flex-col gap-12 md:grid md:grid-cols-4 md:gap-16">
+        <div className="flex flex-col gap-12 lg:grid lg:grid-cols-4 lg:gap-16">
 
           {/* CTA SECTION - SIEMPRE PRIMERO */}
-          <div className="flex flex-col gap-8 md:col-span-2">
-            <h5 className="text-white font-bold text-3xl leading-tight md:text-5xl md:leading-16">
+          <div className="flex flex-col gap-8 lg:col-span-2">
+            <h5 className="text-white font-bold text-3xl leading-tight md:text-5xl lg:leading-16 md:text-start">
               <span className="text-(--roseBoom)">¡</span>
-              Creemos impacto juntos
+              Creemos impacto&nbsp;juntos
               <span className="text-(--roseBoom)">!</span>
             </h5>
 
             {/* BOTONES PRIMERO EN MOBILE */}
-            <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
+            <div className="flex flex-col items-start gap-0 md:flex-row md:gap-4">
               <Button1 text="Contrata un plan" to="/plans" />
               <Button1 text="Contáctanos" to="/contact" />
             </div>

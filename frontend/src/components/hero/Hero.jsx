@@ -11,10 +11,10 @@ export default function Home() {
          justify-center md:justify-start gap-7"
         >
           <div className="flex flex-col leading-none">
-            <h1 className="font-bold text-(--violetBoom) text-6xl sm:text-xl md:text-7xl">
+            <h1 className="font-bold text-(--violetBoom) text-6xl md:text-7xl">
               Boom
             </h1>
-            <h1 className="font-bold text-(--blueBoom) text-6xl sm:text-6xl md:text-7xl">
+            <h1 className="font-bold text-(--blueBoom) text-6xl md:text-7xl">
               Agency
             </h1>
           </div>
@@ -22,7 +22,7 @@ export default function Home() {
             <img
               src="/hero/megaphone.png"
               alt="Megaphone"
-              className="w-20 sm:w-16 md:w-20 self-start animate-bounce"
+              className="w-20 animate-bounce"
             />
           </div>
         </div>
