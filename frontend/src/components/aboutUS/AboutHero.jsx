@@ -13,12 +13,12 @@ export default function AboutHero() {
           workstation="CEO"
         />
         <TeamCard
-          img="/carousel/Glennis.png"
+          img="/carousel/glennis.png"
           name="Glennis Ybirma"
           workstation="CEO"
         />
         <TeamCard
-          img="/carousel/Amanda.png"
+          img="/carousel/amanda.png"
           name="Amanda Gonzalez"
           workstation="CEO"
         />
