@@ -1,53 +1,20 @@
-import Carousel from "../carousel/Carousel";
-import "../../styles/carousel.css";
+import TeamCard from "./TeamCard";
 import Mafer from "/carousel/Mafer.png";
 import Hector from "/carousel/Hector.png";
-import Amanda from '/carousel/amanda.png';
-import Glennis from '/carousel/glennis.png'
+import Amanda from "/carousel/Amanda.png";
+import Glennis from "/carousel/Glennis.png";
 
-import "../../styles/animations.css"
 
 export default function AboutHero() {
-  const users = [
-    {
-      image: Mafer,
-      name: "María Maldonado",
-      text: "CEO",
-    },
-    {
-      image: Glennis,
-      name: "Glennis Ybirma",
-      text: "CEO",
-    },
-    {
-      image: Amanda,
-      name: "Amanda González",
-      text: "Graphic Designer",
-    },
-    {
-      image: Mafer,
-      name: "Edailyn Ibarra",
-      text: "Community",
-    },
-    {
-      image: Hector,
-      name: "Héctor González",
-      text: "Web Developer",
-    },
-  ];
-
   return (
-    <div className="w-full my-10 flex flex-col items-center font-semibold">
-      <h3 className="w-[70%] mt-20 text-4xl text-center uppercase font-bold text-(--blueBoom)">
-        En <span className="hover-text-grow text-(--violetBoom)">Boom Agency</span> hacemos que tu marca&nbsp;brille
-      </h3>
-
-      <div className="max-w-full">
-        <div id="services" className="carousel">
-          {users.map((user, index) => (
-            <Carousel key={index} image={user.image} name={user.name} text={user.text} />
-          ))}
-        </div>
+    <div className="lg:h-screen w-full py-20 flex flex-col justify-center items-center gap-20">
+      <h3 className="text-3xl md:text-4xl font-bold text-(--blueBoom) uppercase">Nuestro equipo</h3>
+      <div className="w-full flex flex-col justify-center items-center md:grid md:grid-cols-2 md:justify-items-center lg:flex lg:flex-row gap-10">
+        <TeamCard img={Mafer} name="Mafer Maldonado" workstation="CEO" />
+        <TeamCard img={Glennis} name="Glennis Ybirma" workstation="CEO" />
+        <TeamCard img={Amanda} name="Amanda Gonzalez" workstation="CEO" />
+        <TeamCard img={Mafer} name="Mafer" workstation="CEO" />
+        <TeamCard img={Hector} name="Hector Gonzalez" workstation="CEO" />
       </div>
     </div>
   );

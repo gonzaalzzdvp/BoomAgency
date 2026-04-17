@@ -2,7 +2,7 @@ import Button1 from "../buttons/Button1";
 
 export default function Home() {
   return (
-    <section className="min-h-[calc(100vh-80px)] mt-20 mb-10 w-full px-6 md:px-16 flex flex-col md:flex-row items-center justify-center gap-12">
+    <section className="min-h-[calc(100vh-80px)] mt-20 mb-10 w-full px-6 md:px-16 flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-40">
       {/* TEXT SIDE */}
       <div className="flex flex-col gap-8 max-w-xl text-center md:text-left">
         {/* TITLE */}
@@ -22,7 +22,7 @@ export default function Home() {
             <img
               src="/hero/megaphone.png"
               alt="Megaphone"
-              className="w-20 animate-bounce"
+              className="w-26 animate-bounce"
             />
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       {/* VIDEO SIDE */}
-      <div className="w-full md:w-100 hidden md:block">
+      <div className="w-full md:w-60 hidden md:block">
         <video src="/hero/heroVid.mp4" autoPlay muted loop playsInline />
       </div>
     </section>
